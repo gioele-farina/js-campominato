@@ -35,19 +35,19 @@ for (var i = 0; i < 16; i++) {
   exit = false;
   do {
     numeroCasuale = randomNumber(100);
-    console.log(numeroCasuale);
+    // console.log(numeroCasuale);
     // se numero non presente
     if (bombe.indexOf(numeroCasuale) === -1) {
       bombe.push(numeroCasuale);
       exit = true;
     } else {
-      console.log("numero già ripetuto: ", numeroCasuale);
+      // console.log("numero già ripetuto: ", numeroCasuale);
     }
   } while (exit != true);
 
 }
 
-console.log(bombe);
+console.log("bombe:", bombe);
 
 /*
 L'UTENTE TENTA LA FORTUNA.
@@ -56,10 +56,41 @@ Default caso 100:
 */
 
 // Ciclo per 100-16 volte
+var punteggio = 0;
+var numeroInseritoUtente;
+var numeriGiaInseriti = [];
+i=0;
+for (var i = 0; i < 84; i++) {
+
   // 1-Utente inserisce numero.
-  // 2-Se numero è uguale a un numero bomba, esce dal ciclo.
-  // 3-Se numero non è presente nella lista numeri inseriti, lo inserisce. E incremento punteggio.
+  // 2-Se numero non è presente nella lista numeri inseriti, lo inserisce e va avanti.
+  exit = false;
+
+  do {
+    numeroInseritoUtente = parseInt(prompt("Inserisci un numero da 1 a 100"));
+
+    if (numeriGiaInseriti.indexOf(numeroInseritoUtente) === -1) {
+      console.log("Numero inserito:", numeroInseritoUtente);
+      numeriGiaInseriti.push(numeroInseritoUtente);
+      exit = true;
+    } else {
+      console.log("Hai già inserito questo numero.");
+    }
+  } while (exit != true);
+
+  // 3-Se numero è uguale a un numero bomba, esce dal ciclo.
+  if (bombe.indexOf(numeroInseritoUtente) !== -1) {
+    console.log("Sei esploso!");
+    i = 84;
+  // incremento il punteggio
+  } else {
+    punteggio++;
+  }
+
   // 4-Stampo il punteggio così scritto: punteggio/max punteggio. max punteggio = 100-16.
+
+}
+
 
 
 
