@@ -26,7 +26,28 @@ arricchisco un pò la mia interazione/layout
 GENERO LE BOMBE.
 16 numeri casuali diversi. li metto dentro un vettore.
 */
+var bombe = [];
+var numeroCasuale;
+var exit;
 
+for (var i = 0; i < 16; i++) {
+  // controllo se la bomba è già stata inserita
+  exit = false;
+  do {
+    numeroCasuale = randomNumber(100);
+    console.log(numeroCasuale);
+    // se numero non presente
+    if (bombe.indexOf(numeroCasuale) === -1) {
+      bombe.push(numeroCasuale);
+      exit = true;
+    } else {
+      console.log("numero già ripetuto: ", numeroCasuale);
+    }
+  } while (exit != true);
+
+}
+
+console.log(bombe);
 
 /*
 L'UTENTE TENTA LA FORTUNA.
@@ -39,3 +60,13 @@ Default caso 100:
   // 2-Se numero è uguale a un numero bomba, esce dal ciclo.
   // 3-Se numero non è presente nella lista numeri inseriti, lo inserisce. E incremento punteggio.
   // 4-Stampo il punteggio così scritto: punteggio/max punteggio. max punteggio = 100-16.
+
+
+
+/*
+                  UTILITIES
+*/
+// Ritorna un numero casuale da 1 a max
+function randomNumber(max){
+  return Math.floor(Math.random() * max) + 1;
+}
