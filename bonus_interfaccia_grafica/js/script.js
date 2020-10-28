@@ -130,25 +130,25 @@ for (var x = 1; x <= 10; x++) {
     // casella: campoFiorito[x][y]
     switch (campoFiorito[x][y]) {
       case "B":
-        appoggio += '<div class="oscurata bomba">B</div>';
+        appoggio += '<div class="oscurata bomba"><p class="elementoInvisibile">B</p></div>';
         break;
       case 0:
-        appoggio += '<div class="oscurata numero0">0</div>';
+        appoggio += '<div class="oscurata numero0"><p class="elementoInvisibile">0</p></div>';
         break;
       case 1:
-        appoggio += '<div class="oscurata numero1">1</div>';
+        appoggio += '<div class="oscurata numero1"><p class="elementoInvisibile">1</p></div>';
         break;
       case 2:
-        appoggio += '<div class="oscurata numero2">2</div>';
+        appoggio += '<div class="oscurata numero2"><p class="elementoInvisibile">2</p></div>';
         break;
       case 3:
-        appoggio += '<div class="oscurata numero3">3</div>';
+        appoggio += '<div class="oscurata numero3"><p class="elementoInvisibile">3</p></div>';
         break;
       case 4:
-        appoggio += '<div class="oscurata numero4">4</div>';
+        appoggio += '<div class="oscurata numero4"><p class="elementoInvisibile">4</p></div>';
         break;
       default:
-        appoggio += '<div class="oscurata numero">' + campoFiorito[x][y] + '</div>';
+        appoggio += '<div class="oscurata numero"><p class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
         break;
     }
   }

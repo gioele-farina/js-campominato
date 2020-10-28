@@ -29,30 +29,49 @@
 
 /* regole delle celle */
 
-.oscurata {
-
+#campoFiorito > div {
+  font-size: 35px;
+  font-weight: bolder;
 }
 
 .numero {
-
+  color: black;
 }
 
 .numero0 {
-
+  color: blue;
 }
 
 .numero1 {
-
+  color: green;
 }
 
 .numero2 {
-
+ color: red;
 }
 
 .numero3 {
-
+ color: yellow;
 }
 
 .numero4 {
+ color: purple;
+}
 
+.oscurata {
+  background-color: grey;
+}
+
+.scoperta {
+  background-color: lightgrey;
+}
+
+/* elementi dentro le celle */
+
+.elementoInvisibile {
+  display: none;
+}
+
+.elementoVisibile {
+  display: block;
 }
