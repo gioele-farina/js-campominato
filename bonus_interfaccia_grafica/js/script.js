@@ -132,25 +132,25 @@ for (var x = 1; x <= 10; x++) {
     contatoreCaselle++;
     switch (campoFiorito[x][y]) {
       case "B":
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata bomba"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">B</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata bomba"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">B</p></div>';
         break;
       case 0:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero 0"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">0</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero 0"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">0</p></div>';
         break;
       case 1:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero1"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">1</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero1"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">1</p></div>';
         break;
       case 2:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero2"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">2</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero2"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">2</p></div>';
         break;
       case 3:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero3"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">3</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero3"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">3</p></div>';
         break;
       case 4:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero4"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">4</p></div>'
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero4"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">4</p></div>'
         break;
       default:
-        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella(' + contatoreCaselle + ')"' + 'class="oscurata casellaNumero numero"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
+        appoggio += '<div onclick="casellaCliccata(' + contatoreCaselle + ')"' + 'oncontextmenu="casellaCliccataDx(' + contatoreCaselle + ')"' + 'id="casella' + contatoreCaselle + '"' + 'class="oscurata casellaNumero numero"><p id="contenutoCasella' + contatoreCaselle + '" class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
         break;
     }
   }
@@ -159,9 +159,6 @@ for (var x = 1; x <= 10; x++) {
 // console.log(appoggio);
 document.getElementById('campoFiorito').innerHTML = appoggio;
 
-/*
-                              Listener al click nell'html (on-click)
-*/
 
 /*
                   UTILITIES
@@ -174,8 +171,21 @@ function randomNumber(max){
 function casellaCliccata(numeroid){
   // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
   var idCasella = "casella" + numeroid;
+  var idContenutoCasella = "contenutoCasella" + numeroid;
   console.log(idCasella);
+  console.log(idContenutoCasella);
+  var casella = document.getElementById(idCasella);
+  var contenutoCasella = document.getElementById(idContenutoCasella);
+  // al click:
+  casella.classList.remove("oscurata");
+  casella.classList.add("scoperta");
 
+  contenutoCasella.classList.remove("elementoInvisibile");
+  contenutoCasella.classList.add("elementoVisibile");
+
+  if (contenutoCasella.value === "B") {
+    console.log("hai perso");
+  }
 }
 
 function casellaCliccataDx(numeroid){
