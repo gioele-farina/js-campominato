@@ -107,7 +107,12 @@ console.log("------------------------------------------------------------");
 console.log("Campo con bombe e numeri");
 console.log(campoFiorito);
 
-
+i = 1;
+var appoggio = "";
+for (var i = 1; i <= 10; i++) {
+  appoggio += campoFiorito[i]+"<br>";
+}
+document.getElementById('debug').innerHTML = appoggio;
 
 
 
