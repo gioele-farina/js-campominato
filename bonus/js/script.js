@@ -11,13 +11,13 @@ La partita termina quando il giocatore inserisce un numero “vietato” o raggi
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
 
-1- BONUS: (da fare solo se funziona tutto il resto)
+fatto 1- BONUS: (da fare solo se funziona tutto il resto)
 all’inizio il software richiede anche una difficoltà all’utente che cambia il range di numeri casuali:
 con difficoltà 0 => tra 1 e 100
 con difficoltà 1 =>  tra 1 e 80
 con difficoltà 2 => tra 1 e 50
 
-2- oppure gestisco qualche caso limite (es.: se utente non inserisce numeri?.. etc.)
+fatto 2- oppure gestisco qualche caso limite (es.: se utente non inserisce numeri?.. etc.)
 
 3- arricchisco un pò la mia interazione/layout
 */
@@ -95,12 +95,14 @@ for (var i = 0; i < numeroDiGiri; i++) {
   do {
     numeroInseritoUtente = parseInt(prompt("Inserisci un numero da 1 a...", difficolta));
 
-    if (numeriGiaInseriti.indexOf(numeroInseritoUtente) === -1) {
+    // BONUS: controllo che il numero inserito sia valido (nel range giusto e che sia un numero)
+
+    if (numeriGiaInseriti.indexOf(numeroInseritoUtente) === -1 && numeroInseritoUtente > 0 && numeroInseritoUtente <= difficolta) {
       console.log("Numero inserito:", numeroInseritoUtente);
       numeriGiaInseriti.push(numeroInseritoUtente);
       exit = true;
     } else {
-      console.log("Hai già inserito questo numero.");
+      console.log("Hai già inserito questo numero oppure numero non valido.");
     }
   } while (exit != true);
 
