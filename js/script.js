@@ -86,10 +86,10 @@ for (var i = 0; i < 84; i++) {
   } else {
     punteggio++;
   }
-
-  // 4-Stampo il punteggio così scritto: punteggio/max punteggio. max punteggio = 100-16.
-
 }
+
+// 4-Stampo il punteggio così scritto: punteggio/max punteggio. max punteggio = 100-16.
+console.log("Hai totalizzato:", punteggio,"/ 84 punti!");
 
 
 
