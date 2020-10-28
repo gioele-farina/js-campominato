@@ -124,31 +124,33 @@ Creo le celle nell'html. Ogni cella avrà la classe oscurata e una delle seguent
 
 x = 0;
 y = 0;
+var contatoreCaselle = 0;
 var appoggio = "";
 for (var x = 1; x <= 10; x++) {
   for (var y = 1; y <= 10; y++) {
     // casella: campoFiorito[x][y]
+    contatoreCaselle++;
     switch (campoFiorito[x][y]) {
       case "B":
-        appoggio += '<div class="oscurata bomba"><p class="elementoInvisibile">B</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata bomba"><p class="elementoInvisibile">B</p></div>';
         break;
       case 0:
-        appoggio += '<div class="oscurata numero0"><p class="elementoInvisibile">0</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero0"><p class="elementoInvisibile">0</p></div>';
         break;
       case 1:
-        appoggio += '<div class="oscurata numero1"><p class="elementoInvisibile">1</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero1"><p class="elementoInvisibile">1</p></div>';
         break;
       case 2:
-        appoggio += '<div class="oscurata numero2"><p class="elementoInvisibile">2</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero2"><p class="elementoInvisibile">2</p></div>';
         break;
       case 3:
-        appoggio += '<div class="oscurata numero3"><p class="elementoInvisibile">3</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero3"><p class="elementoInvisibile">3</p></div>';
         break;
       case 4:
-        appoggio += '<div class="oscurata numero4"><p class="elementoInvisibile">4</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero4"><p class="elementoInvisibile">4</p></div>';
         break;
       default:
-        appoggio += '<div class="oscurata numero"><p class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero"><p class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
         break;
     }
   }
