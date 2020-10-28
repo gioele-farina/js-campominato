@@ -171,7 +171,7 @@ function randomNumber(max){
   return Math.floor(Math.random() * max) + 1;
 }
 
-function casellaCliccata(){
-  // come parametro mi serve l'id della casella
-  
+function casellaCliccata(numeroid){
+  // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
+  console.log("numero id: ", numeroid);
 }
