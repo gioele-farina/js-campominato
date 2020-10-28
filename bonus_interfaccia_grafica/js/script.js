@@ -135,22 +135,22 @@ for (var x = 1; x <= 10; x++) {
         appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata bomba"><p class="elementoInvisibile">B</p></div>';
         break;
       case 0:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero0"><p class="elementoInvisibile">0</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero 0"><p class="elementoInvisibile">0</p></div>';
         break;
       case 1:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero1"><p class="elementoInvisibile">1</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero1"><p class="elementoInvisibile">1</p></div>';
         break;
       case 2:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero2"><p class="elementoInvisibile">2</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero2"><p class="elementoInvisibile">2</p></div>';
         break;
       case 3:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero3"><p class="elementoInvisibile">3</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero3"><p class="elementoInvisibile">3</p></div>';
         break;
       case 4:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero4"><p class="elementoInvisibile">4</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero4"><p class="elementoInvisibile">4</p></div>';
         break;
       default:
-        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata numero"><p class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
+        appoggio += '<div id="casella' + contatoreCaselle + '" class="oscurata casellaNumero numero"><p class="elementoInvisibile">' + campoFiorito[x][y] + '</p></div>';
         break;
     }
   }
@@ -158,6 +158,12 @@ for (var x = 1; x <= 10; x++) {
 
 // console.log(appoggio);
 document.getElementById('campoFiorito').innerHTML = appoggio;
+
+/*
+                              Listener al click
+      li devo davvero fare uno per uno?
+*/
+
 
 
 /*
