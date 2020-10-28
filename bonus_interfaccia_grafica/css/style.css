@@ -1,0 +1,58 @@
+/* Regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fine regole generali */
+
+/* regole del campo */
+
+#campoFiorito {
+  width: 400px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+#campoFiorito > div {
+  width: 10%;
+  height: 40px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* regole delle celle */
+
+.oscurata {
+
+}
+
+.numero {
+
+}
+
+.numero0 {
+
+}
+
+.numero1 {
+
+}
+
+.numero2 {
+
+}
+
+.numero3 {
+
+}
+
+.numero4 {
+
+}
