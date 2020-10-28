@@ -107,13 +107,54 @@ console.log("------------------------------------------------------------");
 console.log("Campo con bombe e numeri");
 console.log(campoFiorito);
 
+// DEBUG VISIVO
+/*
 i = 1;
 var appoggio = "";
 for (var i = 1; i <= 10; i++) {
   appoggio += campoFiorito[i]+"<br>";
 }
 document.getElementById('debug').innerHTML = appoggio;
+*/
 
+/*
+Creo le celle nell'html. Ogni cella avrà la classe oscurata e una delle seguenti classi: numero, bomba.
+*/
+
+
+x = 0;
+y = 0;
+var appoggio = "";
+for (var x = 1; x <= 10; x++) {
+  for (var y = 1; y <= 10; y++) {
+    // casella: campoFiorito[x][y]
+    switch (campoFiorito[x][y]) {
+      case "B":
+        appoggio += '<div class="oscurata bomba">B</div>';
+        break;
+      case 0:
+        appoggio += '<div class="oscurata numero0">0</div>';
+        break;
+      case 1:
+        appoggio += '<div class="oscurata numero1">1</div>';
+        break;
+      case 2:
+        appoggio += '<div class="oscurata numero2">2</div>';
+        break;
+      case 3:
+        appoggio += '<div class="oscurata numero3">3</div>';
+        break;
+      case 4:
+        appoggio += '<div class="oscurata numero4">4</div>';
+        break;
+      default:
+        appoggio += '<div class="oscurata numero">' + campoFiorito[x][y] + '</div>';
+        break;
+    }
+  }
+}
+
+// console.log(appoggio);
 
 
 /*
