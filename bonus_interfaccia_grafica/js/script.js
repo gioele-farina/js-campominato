@@ -12,6 +12,7 @@ var exit;
 var x;
 var y;
 var conteggioBombe;
+var contatoreCaselleCliccate = 0;
 
 // Non utilizzo l'intera matrice ma i bordi esterni li lascio vuoti. C'è una specie di cornice vuota.
 var campoFiorito = [
@@ -177,17 +178,30 @@ function casellaCliccata(numeroid){
   var casella = document.getElementById(idCasella);
   var contenutoCasella = document.getElementById(idContenutoCasella);
   // al click:
+  if (casella.classList.contains("scoperta")) {
+    console.log("già cliccata");
+  } else {
+      contatoreCaselleCliccate++;
+      if (contatoreCaselleCliccate === 84) {
+        console.log("hai vinto!");
+      }
+  }
+
   casella.classList.remove("oscurata");
   casella.classList.add("scoperta");
 
   contenutoCasella.classList.remove("elementoInvisibile");
   contenutoCasella.classList.add("elementoVisibile");
-
-  if (contenutoCasella.value === "B") {
-    console.log("hai perso");
-  }
 }
 
 function casellaCliccataDx(numeroid){
   // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
+  var idCasella = "casella" + numeroid;
+  var idContenutoCasella = "contenutoCasella" + numeroid;
+  console.log(idCasella);
+  console.log(idContenutoCasella);
+  var casella = document.getElementById(idCasella);
+  var contenutoCasella = document.getElementById(idContenutoCasella);
+  // al click:
+
 }
