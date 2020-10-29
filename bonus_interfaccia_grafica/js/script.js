@@ -173,6 +173,12 @@ function randomNumber(max){
 
 function casellaCliccata(numeroid){
   // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
+
+  // controllo se il gioco è terminato. se si impedisco di andare avanti
+  if (document.getElementById('messaggioPerso').classList.contains("elementoVisibile")) {
+    return "Gioco terminato";
+  }
+
   var idCasella = "casella" + numeroid;
   var idContenutoCasella = "contenutoCasella" + numeroid;
   console.log(idCasella);
@@ -186,6 +192,8 @@ function casellaCliccata(numeroid){
       contatoreCaselleCliccate++;
       if (contatoreCaselleCliccate === 84) {
         console.log("hai vinto!");
+        document.getElementById('messaggioVinto').classList.remove("elementoInvisibile");
+        document.getElementById('messaggioVinto').classList.add("elementoVisibile");
       }
   }
 

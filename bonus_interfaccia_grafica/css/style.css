@@ -50,6 +50,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
+  color: green;
+  font-size: 30px;
 }
 /* regole delle celle */
 
