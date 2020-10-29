@@ -118,10 +118,11 @@ for (var i = 1; i <= 10; i++) {
 document.getElementById('debug').innerHTML = appoggio;
 */
 
+
+
 /*
 Creo le celle nell'html. Ogni cella avrà la classe oscurata e una delle seguenti classi: numero, bomba.
 */
-
 
 x = 0;
 y = 0;
@@ -157,9 +158,7 @@ for (var x = 1; x <= 10; x++) {
   }
 }
 
-// console.log(appoggio);
-// aggiungo i messaggi vittoria e sconfitta
-// appoggio += '<h1 id="messaggioPerso" class="elementoInvisibile">Hai perso</h1><h1 id="messaggioVinto" class="elementoInvisibile">Hai vinto</h1>'
+// Inserisco tutte le caselle nell'HTML
 document.getElementById('campoFiorito').innerHTML = appoggio;
 
 
@@ -195,6 +194,7 @@ function casellaCliccata(numeroid){
     return "casella con bandierina";
   }
 
+  // conto se caselle cliccate correttamente per vedere se alla fine vinco
   if (casella.classList.contains("scoperta")) {
     console.log("già cliccata");
   } else {
@@ -206,6 +206,7 @@ function casellaCliccata(numeroid){
       }
   }
 
+  // al click scopro la casella
   casella.classList.remove("oscurata");
   casella.classList.add("scoperta");
 
@@ -224,6 +225,8 @@ function casellaCliccata(numeroid){
 
 function casellaCliccataDx(numeroid){
   // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
+
+  // controllo se il gioco è terminato. se si impedisco di andare avanti
   if (document.getElementById('messaggioPerso').classList.contains("elementoVisibile")) {
     return "Gioco terminato";
   }
@@ -239,10 +242,7 @@ function casellaCliccataDx(numeroid){
   var contenutoCasella = document.getElementById(idContenutoCasella);
   // al click:
 
-  // disabilità menu
-
-
-  // posiziona o togli le bandierine. se assente la metto e se presente la tolgo.
+  // posiziona o toglie le bandierine. se assente la metto e se presente la tolgo.
   if (casella.classList.contains("bandierina")) {
     casella.classList.remove("bandierina");
   } else {
