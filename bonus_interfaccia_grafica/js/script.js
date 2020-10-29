@@ -231,7 +231,6 @@ function casellaCliccataDx(numeroid){
     return "Gioco terminato";
   }
 
-
   var idCasella = "casella" + numeroid;
   var idContenutoCasella = "contenutoCasella" + numeroid;
   console.log(idCasella);
@@ -250,3 +249,11 @@ function casellaCliccataDx(numeroid){
     casella.classList.add("bandierina");
   }
 }
+
+// disabilita menu su click destro
+
+document.getElementById('campoFiorito').addEventListener("contextmenu",
+ function(event){
+   event.preventDefault()
+ }
+);
