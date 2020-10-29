@@ -178,6 +178,9 @@ function casellaCliccata(numeroid){
   if (document.getElementById('messaggioPerso').classList.contains("elementoVisibile")) {
     return "Gioco terminato";
   }
+  if (document.getElementById('messaggioVinto').classList.contains("elementoVisibile")) {
+    return "Gioco terminato";
+  }
 
   var idCasella = "casella" + numeroid;
   var idContenutoCasella = "contenutoCasella" + numeroid;
@@ -214,6 +217,14 @@ function casellaCliccata(numeroid){
 
 function casellaCliccataDx(numeroid){
   // come parametro mi viene passato un numero unico che viene preso direttamente dall'html.
+  if (document.getElementById('messaggioPerso').classList.contains("elementoVisibile")) {
+    return "Gioco terminato";
+  }
+  if (document.getElementById('messaggioVinto').classList.contains("elementoVisibile")) {
+    return "Gioco terminato";
+  }
+
+
   var idCasella = "casella" + numeroid;
   var idContenutoCasella = "contenutoCasella" + numeroid;
   console.log(idCasella);
@@ -221,5 +232,10 @@ function casellaCliccataDx(numeroid){
   var casella = document.getElementById(idCasella);
   var contenutoCasella = document.getElementById(idContenutoCasella);
   // al click:
-
+  // posiziona o togli le bandierine. se assente la metto e se presente la tolgo.
+  if (casella.classList.contains("bandierina")) {
+    casella.classList.remove("bandierina");
+  } else {
+    casella.classList.add("bandierina");
+  }
 }

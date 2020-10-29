@@ -33,7 +33,7 @@
 }
 
 .haiVinto {
-
+  filter: brightness(0.60);
 }
 
 #messaggioPerso {
@@ -43,6 +43,7 @@
   transform: translate(-50% , -50%);
   color: red;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 #messaggioVinto {
@@ -52,6 +53,7 @@
   transform: translate(-50% , -50%);
   color: green;
   font-size: 30px;
+  text-transform: uppercase;
 }
 /* regole delle celle */
 
@@ -90,6 +92,11 @@
 
 .scoperta {
   background-color: lightgrey;
+}
+
+.bandierina {
+  background-image: url(../img/bandierina.png);
+  background-size: contain;
 }
 
 /* elementi dentro le celle */
