@@ -7,12 +7,39 @@
 
 /* fine regole generali */
 
+
+/* titolo */
+.title {
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.github {
+  display: inline-block;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 6px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.github:hover {
+  color: white;
+  background-color: darkgrey;
+}
+
+.github i{
+  padding: 5px;
+}
+
 /* regole del campo */
 
 #campoFiorito {
   width: 400px;
   margin: auto;
-  margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
 
