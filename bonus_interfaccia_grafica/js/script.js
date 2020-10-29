@@ -158,6 +158,8 @@ for (var x = 1; x <= 10; x++) {
 }
 
 // console.log(appoggio);
+// aggiungo i messaggi vittoria e sconfitta
+// appoggio += '<h1 id="messaggioPerso" class="elementoInvisibile">Hai perso</h1><h1 id="messaggioVinto" class="elementoInvisibile">Hai vinto</h1>'
 document.getElementById('campoFiorito').innerHTML = appoggio;
 
 
@@ -192,6 +194,14 @@ function casellaCliccata(numeroid){
 
   contenutoCasella.classList.remove("elementoInvisibile");
   contenutoCasella.classList.add("elementoVisibile");
+
+  //messaggio sconfitta se prendo bomba
+  if (contenutoCasella.innerHTML === "B") {
+    console.log("Hai perso!");
+    document.getElementById('campoFiorito').classList.add("haiPerso");
+    document.getElementById('messaggioPerso').classList.remove("elementoInvisibile");
+    document.getElementById('messaggioPerso').classList.add("elementoVisibile");
+  }
 }
 
 function casellaCliccataDx(numeroid){

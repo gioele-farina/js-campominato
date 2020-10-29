@@ -15,7 +15,8 @@
   margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
-  /* border: 1px solid black; */
+
+  position: relative;
 }
 
 #campoFiorito > div {
@@ -27,6 +28,29 @@
   align-items: center;
 }
 
+.haiPerso {
+  filter: brightness(0.20);
+}
+
+.haiVinto {
+
+}
+
+#messaggioPerso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  color: red;
+  font-size: 30px;
+}
+
+#messaggioVinto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
 /* regole delle celle */
 
 #campoFiorito > div {
