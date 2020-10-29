@@ -215,6 +215,7 @@ function casellaCliccata(numeroid){
   //messaggio sconfitta se prendo bomba
   if (contenutoCasella.innerHTML === "B") {
     console.log("Hai perso!");
+    contenutoCasella.innerHTML = '<i class="fas fa-bomb"></i>';
     document.getElementById('campoFiorito').classList.add("haiPerso");
     document.getElementById('messaggioPerso').classList.remove("elementoInvisibile");
     document.getElementById('messaggioPerso').classList.add("elementoVisibile");

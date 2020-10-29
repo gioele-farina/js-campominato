@@ -37,13 +37,15 @@
 
 /* regole del campo */
 
+main {
+  position: relative;
+}
+
 #campoFiorito {
   width: 400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-
-  position: relative;
 }
 
 #campoFiorito > div {
