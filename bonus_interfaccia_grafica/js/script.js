@@ -189,6 +189,12 @@ function casellaCliccata(numeroid){
   var casella = document.getElementById(idCasella);
   var contenutoCasella = document.getElementById(idContenutoCasella);
   // al click:
+
+  // controllo se la casella ha una bandierina, se si impedisco il click sinitro
+  if (casella.classList.contains("bandierina")) {
+    return "casella con bandierina";
+  }
+
   if (casella.classList.contains("scoperta")) {
     console.log("già cliccata");
   } else {
@@ -232,6 +238,10 @@ function casellaCliccataDx(numeroid){
   var casella = document.getElementById(idCasella);
   var contenutoCasella = document.getElementById(idContenutoCasella);
   // al click:
+
+  // disabilità menu
+
+
   // posiziona o togli le bandierine. se assente la metto e se presente la tolgo.
   if (casella.classList.contains("bandierina")) {
     casella.classList.remove("bandierina");
