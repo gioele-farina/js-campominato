@@ -45,10 +45,10 @@ for (var i = 0; i < numeroBombe; i++) {
     y = randomNumber(10);
 
     // se le coordinate sono vuote:
-    if (campoFiorito[x][y] === "nc") {
-      campoFiorito[x][y] = "B";
-      exit = true;
-    }
+    // if (campoFiorito[x][y] === "nc") {
+    //   campoFiorito[x][y] = "B";
+    //   exit = true;
+    // }
 
   } while (exit != true);
 
