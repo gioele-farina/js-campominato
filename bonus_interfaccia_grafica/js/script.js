@@ -194,7 +194,7 @@ function casellaCliccata(numeroid){
     return "casella con bandierina";
   }
 
-  // conto se caselle cliccate correttamente per vedere se alla fine vinco
+  // conto le caselle cliccate correttamente per vedere se alla fine vinco
   if (casella.classList.contains("scoperta")) {
     console.log("già cliccata");
   } else {
@@ -221,6 +221,14 @@ function casellaCliccata(numeroid){
     document.getElementById('messaggioPerso').classList.remove("elementoInvisibile");
     document.getElementById('messaggioPerso').classList.add("elementoVisibile");
   }
+
+  // Scopre automaticamente gli 0 concatenati.
+  var indiciZeri = [];
+  if (contenutoCasella.innerHTML == "0") {
+    console.log("Controllo 0 concatenati");
+
+  }
+
 }
 
 function casellaCliccataDx(numeroid){
@@ -243,10 +251,13 @@ function casellaCliccataDx(numeroid){
   // al click:
 
   // posiziona o toglie le bandierine. se assente la metto e se presente la tolgo.
-  if (casella.classList.contains("bandierina")) {
-    casella.classList.remove("bandierina");
-  } else {
-    casella.classList.add("bandierina");
+  if (casella.classList.contains("oscurata")) {
+
+    if (casella.classList.contains("bandierina")) {
+      casella.classList.remove("bandierina");
+    } else {
+      casella.classList.add("bandierina");
+    }
   }
 }
 
