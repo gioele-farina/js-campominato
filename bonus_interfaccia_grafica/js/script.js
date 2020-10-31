@@ -45,10 +45,10 @@ for (var i = 0; i < numeroBombe; i++) {
     y = randomNumber(10);
 
     // se le coordinate sono vuote:
-    // if (campoFiorito[x][y] === "nc") {
-    //   campoFiorito[x][y] = "B";
-    //   exit = true;
-    // }
+    if (campoFiorito[x][y] === "nc") {
+      campoFiorito[x][y] = "B";
+      exit = true;
+    }
 
   } while (exit != true);
 
@@ -223,11 +223,11 @@ function casellaCliccata(numeroid){
   }
 
   // Scopre automaticamente gli 0 concatenati.
-  var indiciZeri = [];
-  if (contenutoCasella.innerHTML == "0") {
-    console.log("Controllo 0 concatenati");
-
-  }
+  // var indiciZeri = [];
+  // if (contenutoCasella.innerHTML == "0") {
+  //   console.log("Controllo 0 concatenati");
+  //
+  // }
 
 }
 
