@@ -224,11 +224,6 @@ function casellaCliccata(numeroid){
 
   // Scopre automaticamente gli 0 concatenati.
   // var indiciZeri = [];
-  // if (contenutoCasella.innerHTML == "0") {
-  //   console.log("Controllo 0 concatenati");
-  //
-  // }
-
 }
 
 function casellaCliccataDx(numeroid){
